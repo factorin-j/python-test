@@ -7,11 +7,8 @@
 # modify the passed in list.
 def remove_adjacent(nums):
     # +++your code here+++
-    n = list(sorted(nums))
-    for x in n:
-        if n.count(x) > 1:
-            n.pop(n.index(x))
-    return n
+
+    return [n for i, n in enumerate(nums) if not n == nums[i - 1]]
 
 
 # E. Given two lists sorted in increasing order, create and return a merged
